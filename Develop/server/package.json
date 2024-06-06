@@ -4,8 +4,10 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "server": "nodemon server.js --ignore client"
-    },
+  "dev": "webpack-dev-server",
+  "build": "webpack --mode production",
+  "start": "npm run build && node server.js"
+},
     "keywords": [],
     "author": "",
     "license": "ISC",
