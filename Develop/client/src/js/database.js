@@ -1,4 +1,4 @@
-import { openDB } from 'idb';
+const { openDB } = window.idb;
 
 const initdb = async () => {
   openDB('jate', 1, {
