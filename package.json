@@ -6,7 +6,7 @@
     "scripts": {
       "start": "node Develop/server/server.js",
       "server": "cd Develop/server && npm run server",
-      "build": "cd Develop/client && npm run build",
+      "build": "cd Develop/client && npm install && npm run build",
       "install": "cd Develop/server && npm i && cd ../client && npm i",
       "client": "cd Develop/client && npm start",
       "heroku-postbuild": "npm run install && npm run build"

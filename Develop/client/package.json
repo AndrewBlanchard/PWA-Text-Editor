@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack --watch",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
+    "build": "webpack --mode production",
     "dev": "webpack-dev-server"
   },
   "dependencies": {
