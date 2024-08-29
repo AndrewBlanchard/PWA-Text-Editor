@@ -54,4 +54,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    fallback: {
+      "idb": require.resolve("idb")
+    }
+  }
 };

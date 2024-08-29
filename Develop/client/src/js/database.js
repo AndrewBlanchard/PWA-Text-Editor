@@ -1,4 +1,4 @@
-const { openDB } = window.idb;
+import { openDB } from 'idb';
 
 const initdb = async () => {
   console.log('Initializing database...');
