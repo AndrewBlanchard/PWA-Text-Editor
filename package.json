@@ -8,9 +8,7 @@
     "scripts": {
         "start": "cd Develop/server && npm start",
         "install": "cd Develop/server && npm install && cd ../client && npm install",
-        "heroku-postbuild": "cd Develop/client && npm install --only=dev && npm run build"
-    },
-    "devDependencies": {
-        "mini-css-extract-plugin": "^2.9.1"
+        "build": "cd Develop/client && npm run build",
+        "heroku-postbuild": "npm run build"
     }
 }
