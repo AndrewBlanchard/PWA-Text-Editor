@@ -8,6 +8,6 @@
         "scripts": {
           "start": "cd Develop/server && npm start",
           "install": "cd Develop/server && npm install && cd ../client && npm install",
-          "heroku-postbuild": "cd Develop/client && npm run build"
+          "heroku-postbuild": "cd Develop/client && npm install --only=dev && npm run build"
         }
       }
