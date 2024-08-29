@@ -3,11 +3,14 @@
     "version": "1.0.0",
     "description": "PWA Text Editor",
     "engines": {
-      "node": "14.x"
+        "node": "14.x"
     },
-        "scripts": {
-          "start": "cd Develop/server && npm start",
-          "install": "cd Develop/server && npm install && cd ../client && npm install",
-          "heroku-postbuild": "cd Develop/client && npm install --only=dev && npm run build"
-        }
-      }
+    "scripts": {
+        "start": "cd Develop/server && npm start",
+        "install": "cd Develop/server && npm install && cd ../client && npm install",
+        "heroku-postbuild": "cd Develop/client && npm install --only=dev && npm run build"
+    },
+    "devDependencies": {
+        "mini-css-extract-plugin": "^2.9.1"
+    }
+}

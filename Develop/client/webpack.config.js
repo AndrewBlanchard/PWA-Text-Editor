@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   return {
@@ -17,18 +18,26 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Your App Name',
+        title: 'J.A.T.E'
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
-        name: 'Your App Name',
-        short_name: 'YourApp',
-        description: 'Your App Description',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        fingerprints: false,
+        inject: true,
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
+        description: 'Takes notes with JavaScript syntax highlighting!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -42,7 +51,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         {
           test: /\.js$/,
