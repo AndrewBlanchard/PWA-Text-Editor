@@ -6,10 +6,10 @@
     "scripts": {
       "start": "node Develop/server/server.js",
       "server": "cd Develop/server && npm run server",
-      "build": "cd Develop/client && npm install && npm run build",
+      "build": "cd Develop/client && npm install && npx webpack --mode production",
       "install": "cd Develop/server && npm i && cd ../client && npm i",
       "client": "cd Develop/client && npm start",
-      "heroku-postbuild": "npm run install && npm run build"
+      "heroku-postbuild": "npm install --production=false && npm run build"
     },
     "engines": {
       "node": "16.x"
