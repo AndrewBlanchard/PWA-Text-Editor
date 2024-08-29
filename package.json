@@ -4,13 +4,13 @@
     "description": "PWA Text Editor",
     "main": "server.js",
     "scripts": {
-      "start": "node Develop/server/server.js",
-      "server": "cd Develop/server && npm run server",
-      "build": "cd Develop/client && npm install && npx webpack --mode production",
-      "install": "cd Develop/server && npm i && cd ../client && npm i",
-      "client": "cd Develop/client && npm start",
-      "heroku-postbuild": "npm install --production=false && npm run build"
-    },
+  "start": "node Develop/server/server.js",
+  "server": "cd Develop/server && npm run server",
+  "build": "cd Develop/client && npm install && npm run build",
+  "install": "cd Develop/server && npm i && cd ../client && npm i",
+  "client": "cd Develop/client && npm start",
+  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Develop/client && npm run build --prefix Develop/client"
+},
     "engines": {
       "node": "16.x"
     }
