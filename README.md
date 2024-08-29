@@ -24,6 +24,7 @@ Express.js
 Heroku
 
 ## Screenshot:
+<img alt= "JATE Heroku App" src = https://github.com/AndrewBlanchard/PWA-Text-Editor/blob/main/Assets/Screenshot-of-Deployed-App.png> 
 
 ## License
 
