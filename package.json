@@ -2,17 +2,12 @@
     "name": "pwa-text-editor",
     "version": "1.0.0",
     "description": "PWA Text Editor",
-    "main": "Develop/server/server.js",
+    "engines": {
+      "node": "14.x"
+    },
     "scripts": {
       "start": "cd Develop/server && npm start",
       "install": "cd Develop/server && npm install && cd ../client && npm install",
       "heroku-postbuild": "cd Develop/client && npm run build"
-    },
-    "engines": {
-      "node": "14.x"
-    },
-    "dependencies": {
-      "express": "^4.17.1"
-    },
-    "devDependencies": {}
+    }
   }
